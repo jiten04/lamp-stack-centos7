@@ -7,8 +7,8 @@ sed -i '$ a servername 35.176.109.10' /etc/apache2/apache2.conf
 sudo apache2ctl configtest
 sudo systemctl restart apache2
 
-echo mysql-server mysql-server/root_password select 9871204995 | debconf-set-selections
-echo mysql-server mysql-server/root_password_again select 9871204995 | debconf-set-selections
+sudo echo mysql-server mysql-server/root_password select 9871204995 | debconf-set-selections
+sudo echo mysql-server mysql-server/root_password_again select 9871204995 | debconf-set-selections
 sudo apt-get install -y mysql-server
 sudo systemctl start mysql
 
