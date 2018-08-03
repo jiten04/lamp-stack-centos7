@@ -138,14 +138,14 @@ sudo yum install -y gcc
 sudo yum update -y bash
 
 # Let's make sure that firewalld is installed:
-sudo yum install -y firewalld
-sudo systemctl start firewalld
+#sudo yum install -y firewalld
+#sudo systemctl start firewalld
 
 # Install and set-up NTP daemon:
 if [ "$isCentOs7" == true ]; then
     sudo yum install -y ntp
-    sudo firewall-cmd --add-service=ntp --permanent
-    sudo firewall-cmd --reload
+    #sudo firewall-cmd --add-service=ntp --permanent
+    #sudo firewall-cmd --reload
 
     sudo systemctl start ntpd
 fi
